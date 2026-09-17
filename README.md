@@ -22,6 +22,7 @@ By day: Sr. Software Engineer at CNA Insurance, moving toward technical leadersh
 
 - **`fde-rag-blueprint`** — production RAG service template: FastAPI, hybrid vector + graph retrieval, eval harness, tracing, Docker. The way I'd ship retrieval at a client.
 - **`ai-opportunity-audit`** — the tooling behind my AI Opportunity Audit: point it at a business, get a scoped, priced automation roadmap.
+- **`get247-ops`** *(daily build 2026-09-17)*: Get247 control plane: bounded catalog, consequence-class policy gates, one-time approvals, budget kill-switch, audit trail. Lives in [`daily/2026-09-17-get247-ops`](./daily/2026-09-17-get247-ops) until promoted to its own repo.
 - **`MotivatedSellerHub`** — connects motivated sellers with investors (real estate).
 - **`Inventory`** — inventory management app.
 - **`IF`** — online ordering for a halal meat business.
@@ -32,6 +33,7 @@ By day: Sr. Software Engineer at CNA Insurance, moving toward technical leadersh
 
 ## Currently
 
+- Shipping **one extractable repo per day** under [`daily/`](./daily/DAILY.md) (today: Get247 ops control plane).
 - Running a weekend sprint: **$497 AI Opportunity Audits** for local businesses (credited toward the build).
 - On the market for **Forward Deployed Engineer** roles — open to remote US.
 

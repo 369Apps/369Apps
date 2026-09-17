@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Get247 Ops · Control Plane</title>
+  <meta name="description" content="Bounded operations over WhatsApp. Catalog request, policy gates, human approval, verified outcome." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@450;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg0: #08110d;
+      --bg1: #102019;
+      --ink: #e7f2ea;
+      --muted: #8fa899;
+      --line: #1e3229;
+      --accent: #3dba7a;
+      --warm: #e6c07b;
+      --danger: #e25b4c;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      background:
+        radial-gradient(900px 500px at 85% -10%, rgba(61,186,122,.18), transparent 55%),
+        radial-gradient(700px 420px at -10% 30%, rgba(230,192,123,.10), transparent 50%),
+        linear-gradient(165deg, var(--bg0), var(--bg1) 55%, #0a1611);
+    }
+    .shell { width: min(980px, calc(100% - 40px)); margin: 0 auto; padding: 36px 0 80px; }
+    .brand {
+      font: 500 12px/1 "IBM Plex Mono", monospace;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    h1 {
+      font-family: "Fraunces", serif;
+      font-weight: 700;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      letter-spacing: -.04em;
+      line-height: .98;
+      margin: 18px 0 16px;
+      max-width: 14ch;
+    }
+    .lede {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: var(--muted);
+      max-width: 42rem;
+      line-height: 1.45;
+      margin: 0 0 28px;
+    }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; }
+    .cta a {
+      text-decoration: none;
+      padding: 14px 18px;
+      font-weight: 700;
+      border: 1px solid var(--line);
+      color: var(--ink);
+    }
+    .cta a.primary { background: var(--accent); color: #062214; border-color: transparent; }
+    .pipe {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 8px 0 42px;
+    }
+    .pipe div {
+      border: 1px solid var(--line);
+      background: rgba(20,32,26,.65);
+      padding: 16px 14px;
+      min-height: 110px;
+    }
+    .pipe .n {
+      font: 500 11px/1 "IBM Plex Mono", monospace;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--warm);
+      margin-bottom: 10px;
+    }
+    .pipe strong { display: block; font-size: 1.05rem; margin-bottom: 6px; }
+    .pipe span { color: var(--muted); font-size: .92rem; line-height: 1.35; }
+    section { padding: 28px 0; border-top: 1px solid var(--line); }
+    section h2 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      letter-spacing: -.02em;
+      margin: 0 0 10px;
+    }
+    section p { color: var(--muted); max-width: 40rem; line-height: 1.5; }
+    pre {
+      background: #07140f;
+      border: 1px solid var(--line);
+      padding: 18px;
+      overflow: auto;
+      font: 450 13px/1.5 "IBM Plex Mono", monospace;
+      color: #c9e3d2;
+    }
+    .ship, .dont {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    ul { margin: 8px 0 0; padding-left: 1.1rem; color: var(--muted); line-height: 1.55; }
+    .dont h3 { color: var(--danger); }
+    .ship h3 { color: var(--accent); }
+    footer { margin-top: 40px; color: var(--muted); font-size: .9rem; }
+    footer a { color: var(--accent); }
+    @media (max-width: 720px) {
+      .pipe, .ship, .dont { grid-template-columns: 1fr; }
+      h1 { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="brand">Get247.ai · ops control plane</div>
+    <h1>The catalog is the product.</h1>
+    <p class="lede">
+      Clients message in natural language. Get247 runs a bounded menu of business tasks:
+      schedule, brief, follow up, escalate. AI stays inside the wire. A named human owns the account.
+    </p>
+    <div class="cta">
+      <a class="primary" href="/docs">Open API docs</a>
+      <a href="/catalog">View catalog</a>
+    </div>
+
+    <div class="pipe">
+      <div><div class="n">01</div><strong>Catalog request</strong><span>Match a supported op or route out-of-catalog to the desk.</span></div>
+      <div><div class="n">02</div><strong>Policy + budget</strong><span>Identity, caps, and consequence class decide authority.</span></div>
+      <div><div class="n">03</div><strong>Human gate</strong><span>Class B needs a one-time approval link. Class C stays human-controlled.</span></div>
+      <div><div class="n">04</div><strong>Verified outcome</strong><span>Execute with a kill-switch. Return proof. Append the audit trail.</span></div>
+    </div>
+
+    <section>
+      <h2>Try the demo tenant</h2>
+      <p>Seeded identity <code>wa:+15551234567</code> on tenant <code>client_demo</code>.</p>
+      <pre>curl -s localhost:8000/intake -H 'Content-Type: application/json' -d '{
+  "channel": "whatsapp",
+  "channel_user_id": "wa:+15551234567",
+  "text": "Am I available Tuesday afternoon?"
+}' | jq
+
+curl -s localhost:8000/intake -H 'Content-Type: application/json' -d '{
+  "channel": "whatsapp",
+  "channel_user_id": "wa:+15551234567",
+  "text": "Book a meeting tomorrow at 2pm titled Investor intro"
+}' | jq</pre>
+    </section>
+
+    <section class="ship">
+      <div>
+        <h3>Ship</h3>
+        <ul>
+          <li>Schedule, move, or cancel appointments</li>
+          <li>Research and deliver structured briefs</li>
+          <li>Prepare approved follow-ups</li>
+          <li>Escalate exceptions to a named human</li>
+        </ul>
+      </div>
+      <div class="dont">
+        <h3>Do not market</h3>
+        <ul>
+          <li>Open-ended AI access</li>
+          <li>"Ask anything" general chat</li>
+          <li>Model access as the product</li>
+          <li>Uncataloged personal errands</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      Daily build 2026-09-17 · From the Get247 system blueprint v1.1 ·
+      <a href="https://get247.ai">get247.ai</a>
+    </footer>
+  </div>
+</body>
+</html>
